@@ -456,18 +456,26 @@ void loop() {
       if (lastscore<9999) {
        tft.print("# in "); 
        tft.print((9999-lastscore)/2+1); tft.print(F(" st"));        
-      } else tft.print("Checkmate"); 
+      } else {
+        tft.print("Checkmate"); 
+        always=false;    
+        BCM.Show(always);   
+      }
     } else if (lastscore<-9000) {
       tft.setTextSize(1);    
       tft.setTextColor(RED); 
       tft.setCursor(0,210);    
-      tft.print("GIVE UP!");       
+      tft.print("GIVE UP!");   
+      always=false;        
+      BCM.Show(always);   
       show_steps();
     } else if (lastscore==8999) { //Draw
       tft.setTextSize(1);    
       tft.setTextColor(YELLOW); 
       tft.setCursor(0,210);    
-      tft.print("Draw");       
+      tft.print("Draw");   
+      always=false;    
+      BCM.Show(always);   
     }         
     tft.setTextSize(1);    
     tft.setTextColor(GRAY); 
