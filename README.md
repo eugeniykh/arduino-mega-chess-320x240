@@ -1,1 +1,2 @@
-"# arduino-mega-chess-320x240" 
+AutoPlay Chess Version For Ardunio Touch Screen 320x240
+
