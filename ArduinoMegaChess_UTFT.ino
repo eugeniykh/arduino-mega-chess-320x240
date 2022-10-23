@@ -750,6 +750,7 @@ void gui() {
       } else if (BDesc.IsPressed(x,y)) {  //расстановка
        beep(100); 
        if (!choice) {
+        always=false;
         choice=1;
         cur_choice=1;
         load_choice();
